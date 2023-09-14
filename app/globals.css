@@ -1,0 +1,23 @@
+
+:root {
+  --black: #3B434E;
+  --white: white;
+  --primary: #7653FC;
+  --primary-hover: #6140E5;
+  --red: #FC836D;
+  --green: #1DC37E;
+  --light-green: #C8F8E4;
+  --font-family: 'Noto Sans', sans-serif;
+  --light-grey: #EBEBEB;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--black);
+  background-color: #F5F6F8;
+}

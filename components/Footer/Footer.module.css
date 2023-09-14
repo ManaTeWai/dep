@@ -1,0 +1,31 @@
+.footer {
+  display: grid;
+
+  padding: 25px 30px;
+
+  color: var(--white);
+  background-color: var(--primary);
+  grid-area: footer;
+  grid-template-columns: 1fr auto auto;
+  gap: 10px 40px;
+}
+
+.footer a {
+  transition: 1s;
+  text-decoration: none;
+
+  color: var(--white);
+}
+
+.footer a:hover {
+  transition: 1s;
+
+  color: var(--light-grey);
+}
+
+@media (width <= 765px) {
+  .footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
