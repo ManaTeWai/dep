@@ -3,7 +3,7 @@ export * from './Button/Button';
 export * from './P/P';
 export * from './Tag/Tag';
 export * from './Rating/Rating';
-export * from './Rating/Rating_state';
+export * from './Rating/RatingState';
 export * from './Header/Header';
 export * from './Footer/Footer';
 export * from './Sidebar/Sidebar';
