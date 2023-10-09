@@ -1,6 +1,6 @@
 import { Htag, Button, P, Tag, RatingState } from '../components';
 
-export default async function Home() {
+export default function Home() {
   
   return (
     <>        
