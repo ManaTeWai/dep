@@ -1,12 +1,14 @@
+'use client';
+
 import styles from './Menu.module.css';
 import cn from 'classnames';
-import { format } from 'date-fns';
 import CoursesIcon from './icons/Cources.svg';
 import ServicesIcon from './icons/Services.svg';
 import BooksIcon from './icons/Books.svg';
 import ProductsIcon from './icons/Products.svg';
 import { TopLevelCategory } from '../../interfaces/page.interface';
 import { FirstLevelMenuItem } from '../../interfaces/menu.interface';
+import { useContext } from 'react';
 
 const FirstLevelMenu: FirstLevelMenuItem[] = [
 	{ route: 'courses', name: 'Курсы', icon: <CoursesIcon />, id: TopLevelCategory.Courses},
@@ -16,6 +18,7 @@ const FirstLevelMenu: FirstLevelMenuItem[] = [
 ];
 
 export const Menu = (): JSX.Element => {
+	const { menu, setMenu, firstCategory } = useContext(AppContext)
 
 	const buildFirstLevel = () => {
 		return (
@@ -24,7 +27,7 @@ export const Menu = (): JSX.Element => {
 					<div key={menu.route}>
 						<a href={'/${menu.route}'}>
 							<div className={cn(styles.firstLevel, {
-								[styles.firstLevelActive]: menu.id == firstCategory;
+								[styles.firstLevelActive]: menu.id == firstCategory
 							})}>
 								{ menu.icon }
 								<span>{ menu.name }</span>

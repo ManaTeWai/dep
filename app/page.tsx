@@ -8,6 +8,7 @@ export default function Home() {
         <Button appearance="primary" arrow='right' className='tp'>Button</Button>
         <Button appearance="ghost" arrow='down'>ghost</Button>
         <P size='large'>Большой</P>
+        <P size='large'>{process.env.NEXT_PUBLIC_DOMAIN}</P>
         <P size='medium'>Средний</P>
         <P size='small'>Маленький</P>
         <Tag size='medium' color='green'>Tag</Tag>
