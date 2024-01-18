@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export async function generateStaticParams() {
 	const menu = await getMenu(0);
-	return menu.flatmap(item => item.pages.map(page => ({ alias: page.alias })));
+	return menu.flatMap(item => item.pages.map(page => ({ alias: page.alias })));
 }
 
 export default async function PageProducts({ params }: { params: { alias: string } }) {
