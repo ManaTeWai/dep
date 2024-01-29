@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { getPage } from '../../../api/page';
-import { getMenu } from '../../../api/menu';
+import { menuAPI } from '../../../api/menu';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 export async function generateStaticParams() {
-	const menu = await getMenu(0);
+	const menu = await menuAPI(0);
 	return menu.flatMap(item => item.pages.map(page => ({ alias: page.alias })));
 }
 
